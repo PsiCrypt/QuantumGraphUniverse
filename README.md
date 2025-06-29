@@ -39,59 +39,6 @@ Global layer: reversible gates (Fredkin/Toffoli).
  Maximum S ≈ 2 + C / sqrt(|σ_ab|)
  Higher S indicates tighter topological connections at subnuclear scales.
 
-🛠 Theoretical Refinements & Open Challenges
-
-Concrete Form of Local Rule
-
-The Boolean function f:
-φ_v^(t+1) = R̂_local(φ_v, ⊕{u∈N(v)}φ_u, q{v,u}).
-
-How does f depend on topological charge q_e or gauge-like fields?
-
-Can f be derived from a discrete least-action principle on the graph?
-
-Physical Interpretation of U_global
-
-Although reversibility is proven, what is the physical meaning of the specific cascade of reversible gates F_k for a given graph and R̂_local?
-
-Does U_global emerge via coarse-graining or conservation laws on the graph?
-
-Refining Graph Complexity (compl(G_ab))
-
-Graph diameter alone may be insufficient; consider:
-
-Cycle count (Betti numbers)
-
-Spectral entropy of adjacency matrix
-
-Edge/vertex entropy measures
-
-Define a mapping f(compl) to seed length.
-
-Determining the Scale T_graph
-
-How does T_graph relate to global parameters: |V|, D, ?
-
-Estimate k_B T_graph via energy splitting of topological modes.
-
-From Z_8⋊S_3 to SM Gauge Groups
-
-How do graph automorphisms yield emergent SU(3)×SU(2)×U(1)?
-
-Map D=8 lattice (E_8×E_8) projections to SM charges.
-
-Topological Defects ↔ Particle Spectrum
-
-Match defect types (loops, vortices) to SM fermions/bosons.
-
-Derive g(ε)∼ε^{1/2} from defect spectrum.
-
-Emergent Gravity from Discrete Curvature
-
-Mechanism to average discrete curvature q_e into Ricci tensor R_μν.
-
-Develop block-spin or renormalization on the graph.
-
 
 📌 Justification for the Experiment
 In standard quantum mechanics, cooling reduces thermal noise exponentially, making error rates tend toward zero. The new graph-based model predicts the opposite: below ~50 mK, error rates sharply increase by orders of magnitude.
