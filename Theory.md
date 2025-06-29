@@ -1,147 +1,194 @@
 # Theory of Discrete Spacetime as a Quantum Graph
-## A Falsifiable Foundation for New Physics
 
-> **"This theory doesn't complete physics — it reboots it.
-> The discrete graph isn't a model of spacetime;  
-> it *is* spacetime.
-> Falsifiable predictions await experimental judgment.
-> Sheepmetry's days are numbered."**  
-> *– Lim Troev, Quantum Graph Manifesto (2024)*
+**Complete Formulation (Version 2.0)**
 
 ---
 
-## 📐 Fundamental Axioms
+## ⧉ Universe Axiom
 
-### 1.1 Spacetime Substance
-Spacetime is a finite directed graph:
-
-- **G = (V, E)**
-- |V| ≤ 10^120  (Planck-scale vertices)
-- e_{ij} ∈ E : causal links
-
-Visual: 3D lattice with fractal self-similarity at small scales
+**Universe** = ⟨ G, φ, R̂, Θ | Aut(G) ≅ Z₈ ⋊ S₃, D=8 ⟩
 
 ---
 
-### 1.2 State Representation
-Each vertex carries a state bit:
-- φ : V → {0,1}
+## 🌌 Fundamental Axioms
 
-Meaning:
-- 0 → false vacuum
-- 1 → true vacuum / particle presence
+### 1. Spacetime Substance
+
+* **Graph**: G = (V, E), |V| ≤ 10^120, directed causal edges e\_{ij}
+* **Topology**: 3D lattice with fractal self‑similarity at ℓ\_p scales
+* **Emergent Dimension**: spectral dimension ds = −2 · (d ln P(t) / d ln t)
+* **Signature**: (− + + +) encoded via edge directions
+
+### 2. Vertex States
+
+* Each vertex state φ ∈ {0, 1}
+
+  * 0 ⇒ false vacuum
+  * 1 ⇒ true vacuum / particle
+* **State entropy** Sv = −φ ln φ − (1−φ) ln(1−φ)
+
+```math
+φ : V → {0,1}
+```
+
+* 0 ≡ false vacuum
+* 1 ≡ true vacuum / particle
+
+**State entropy:**
+
+```math
+S_v = -φ_v ln φ_v - (1-φ_v) ln(1-φ_v)
+```
+
+### 3. Topological Charges
+
+```math
+q_e ∈ {-1,0,+1},  κ_v = Σ_{e ∋ v} q_e
+```
+
+**Discrete Ricci curvature:**
+
+```math
+Ric(v) = κ_v / deg(v)
+```
+
+### 4. Global Symmetry
+
+```math
+Aut(G) ≅ Z_8 ⋊ S_3
+```
+
+**SM embedding:** SU(3) from color triangles, SU(2) from vertex flips, U(1) from cycle phases
 
 ---
 
-### 1.3 Topological Charges
-Edges carry discrete curvature:
-- q_e ∈ {–1, 0, +1}
-- κ_e = q_e / ℓ_p^2
+## ⚛️ Dynamical Principles
 
----
+### 1. Hierarchical Evolution
 
-## 🔄 Dynamical Principles
+```math
+φ^{(t+1)} = U_global ∘ R_local(φ^{(t)})
+```
 
-### 2.1 Evolution Operator
-State updates per Planck time τ_p:
+**Local layer:**
 
-φ_v^{(t+1)} = R̂( φ_v^{(t)}, XOR over neighbors, q_{v,u} )
+```math
+[R_local]_i = φ_i ⊕ ( ⊕_{j∈N(i)}(φ_j ⊗ q_{ij}) ⊕ κ_i )
+```
 
-- N(v): neighbors within lightcone
-- XOR: bitwise
-- R̂: cryptographic bijective map (e.g., SHA-256 → LSB)
+where `φ_j ⊗ q_{ij} := (φ_j + |q_{ij}|) mod 2`
 
----
+**Global layer:**
 
-### 2.2 Entanglement Protocol
-For particle pairs:
-- result_a = R̂_a( σ_{ab} ⊕ setting_a )
+```math
+U_global = exp(i G),  G = Σ θ_k Γ_k
+```
 
-Where:
-- σ_{ab}: shared seed
-- |σ| = ceil [ log2( diam(G_{ab}) / ℓ_p ) ]
+### 2. Entanglement Protocol
+
+```math
+result_a = R_a(σ_ab ⊕ setting_a)
+```
+
+```math
+|σ_ab| = ceil( sqrt(compl(G_ab)) )
+compl(G_ab) = β_1 * log2( λ2 * sqrt(diam/ℓ_p) )
+```
 
 ---
 
 ## 📜 Core Theorems
 
-✅ **Reversibility Theorem**  
-∀ G ∃ R̂^{-1}: G^{(t)} → G^{(t–1)}  
-Proof: Bijectivity of hash preserves state entropy.
+1. **Weak Reversibility**
+   ∀G ∃ U\_global: G^{(t)}→G^{(t-1)}
+   *Proof:* Fredkin/Toffoli universality.
+
+2. **Bell Bound**
+   max S(a,a',b,b') ≤ 2 + O(|σ|^{-1/2})
+
+3. **Shor’s Anomaly**
+   P\_error(T) = A e^{-T/T\_c} + B (T/T\_graph)^{-3/2}
+
+4. **Quantized Scattering**
+   dσ/dΩ = Σ\_{k=-7}^7 c\_k δ(θ-θ\_k), θ\_k=arccos(k/8)
 
 ---
 
-✅ **Bell Inequality Bound**  
-max S(a,a′,b,b′) ≤ 2 + O( |σ|^{-1/2} )  
-Observed S=2.76 implies subnuclear entanglement scale.
+## 🔬 Experimental Predictions
+
+| Phenomenon        | Prediction                  | Timeline           |
+| :---------------- | :-------------------------- | :----------------- |
+| Shor’s breakdown  | +1000% error below 50 mK    | 2024 (IBM/Rigetti) |
+| Proton scattering | Sharp resonance at θ=60°    | 2035 (FCC)         |
+| London jump       | Δλ/λ=1−d\_F^{−1/2} in Nb₃Sn | Now                |
+| Bell anomaly      | S→2.01 at Δt<10^{-20}s      | Next‑gen lasers    |
+| Specific heat     | Peak at T\_graph≈48 mK      | 2024               |
 
 ---
 
-✅ **Shor's Anomaly**  
-P_error(T) = A·e^{–T/T_c} + B·(T/T_graph)^{–3/2}  
-Origin: unfreezable graph degrees of freedom.
+## ⚠️ Falsification Conditions
 
----
+Theory is falsified if *all* conditions hold:
 
-## 🔍 Experimental Predictions
-
-| Phenomenon          | Prediction                                        | Timeline           |
-|--------------------|--------------------------------------------------|-------------------|
-| Shor's breakdown   | +1500% errors at T=0.01 K                         | 2025 (IBM/Rigetti)|
-| Proton scattering  | Sharp resonances at θ_k=arccos(k/8), k=±3,±4      | 2035 (FCC)        |
-| Superconductivity  | Δλ_L/λ_L=1–d_F^{–1/2} for Nb₃Sn crystals         | Now               |
-| Bell test          | S→2.01 at Δt<10^{–20}s                            | Next-gen lasers   |
-
----
-
-## 🔬 Falsification Conditions
-
-The model is refuted if:
-
-- ∀ T∈[0.001,0.05] K :  
-  P_error^exp(T) < 10×P_error^QM(T)
-- and σ(60°)_{FCC} <10 fb
-- and |Δλ_L/λ_L|_{Nb₃Sn} <0.5
+```math
+∀T∈[10,100]mK: P_error^exp(T) < 5·P_error^QM(T)
+σ(60°)_FCC < 10 fb
+|Δλ/λ|_{Nb3Sn} < 0.5
+No C_V peak at T_graph
+```
 
 ---
 
 ## 🧠 Philosophical Implications
 
-**6.1 Death of Continuum**  
-lim_{ℓ_p→0} QM ≠ Reality  
-→ Continuum physics emerges only at L ≫ ℓ_p
-
-**6.2 Computational Universe**  
-physics = SHA256(graph state)  
-→ quantum "mysteries" as cryptographic artifacts
+1. **Death of Continuum**: lim\_{ℓ\_p→0} QM ≠ Reality
+2. **Computational Universe**: physics = U\_global ∘ R\_local(graph)
+3. **Quantum Gravity**: R\_{μν}−½gR = (1/ℓ\_p^2)⟨q\_e⟩
 
 ---
 
-## 🧪 Open Problems
+## 🔍 Open Problems & Roadmap
 
-- Quantum gravity derivation:  
-  R_{μν}–½g_{μν}R= (1/ℓ_p^2)⟨q_e⟩
-- Standard Model reduction: fermions as topological defects
-- Dark matter: frozen graph components at T<T_graph
-
----
-
-## 📦 Repository & License
-
-- **Repo:** github.com/QuantumGraphUniverse
-- **License:** Code GPL-3.0 | Theory CC BY-SA 4.0
-- **Preprint:** arXiv:2407.XXXXX
-- **Experimental protocol:** DOI:10.5281/zenodo.XXXXXXX
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
-![License](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)
+|           Problem | Solution Sketch                     | Verification         |
+| ----------------: | :---------------------------------- | :------------------- |
+|      SM reduction | Embed SU(3)×SU(2)×U(1) in Z\_8⋊S\_3 | LHCb asymmetries     |
+| Defects→particles | Python mapping algorithm            | ARPES experiments    |
+|      Renorm. flow | Block‑spin hypercube                | Numerical relativity |
+|   Fermion spectra | Three topological defect classes    | Neutrino anomalies   |
 
 ---
 
-## ⚡ Summary
-A new discrete theory of the universe based on quantum graphs predicts falsifiable anomalies in Shor’s algorithm, particle scattering, and superconductivity.  
-Verification requires ~2 days of quantum computer time.  
-If successful, it may become the first experimentally tested “theory of everything.”
+## 💻 Sample Simulation Code
+
+````python
+import networkx as nx
+import numpy as np
+
+G = nx.grid_graph([4,4,4])
+for v in G.nodes():
+    G.nodes[v]['phi'] = np.random.randint(2)
+    G.nodes[v]['kappa'] = sum(np.random.choice([-1,0,1]) for _ in G.adj[v])
+
+def R_local(G):
+    # ... implementation ...
+    return new_phi
+
+def evolve(G):
+    phi_local = R_local(G)
+    # U_global omitted
+    return phi_local
+\```
 
 ---
 
+## 📚 References
+
+- De Vos (2010) _Reversible Computing_  
+- Connes (1994) _Noncommutative Geometry_  
+- Wolfram (2002) _A New Kind of Science_  
+
+---
+
+📜 License: GPL-3.0 / CC BY-SA 4.0
+
+````
