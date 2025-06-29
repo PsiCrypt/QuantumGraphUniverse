@@ -3,7 +3,7 @@
 
 ## Core Prediction  
 ```math  
-\boxed{P_{\text{error}}(T) = e^{-T/T_c} + C\left(\frac{T_{\text{graph}}}{T}\right)}^{3/2}
+\boxed{P_{\text{error}}(T) = e^{-T/T_c} + B\left(\frac{T_{\text{graph}}}{T}\right)}^{3/2}
 ```
 Discrete Universe Model: Theory, Predictions, and the Critical Experiment
 If successful, this experiment will prove the discreteness of the universe.
