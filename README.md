@@ -175,7 +175,7 @@ Technical note for experimenters
     
     C --> D{Cool to next T}
     
-    D -->|Down to 10 mK| B
+    D -->|Down to 10 mK| --> B
     
     D -->|Complete| E[Compare P_error vs T]
 
