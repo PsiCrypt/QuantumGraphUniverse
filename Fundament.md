@@ -183,11 +183,11 @@ def evolve(G):
 ## 🔍 A "slight" difference from Wolfram's Theory
 
 
-| Aspect                | Wolfram's Theory (2002)              | Our Theory (2023)                                       |
+| Aspect                | Wolfram's Theory (2002)              | Our Theory (2024)                                       |
 |----------------------:|--------------------------------------|---------------------------------------------------------|
 | **Nature of space**-- | Background continuous space          | The graph itself **is** physical space                  |
 | **Dynamics**          | Deterministic rules                  | Quantum operators (local + global)                      |
-| **Quantum mechanics** | Not explained                        | Built-in via reversibility and entanglement             |
+| **Quantum mechanics** | Not explained?                       | Built-in via reversibility and entanglement             |
 | **Gravity**           | Absent                               | Emerges from ⟨qₑ⟩ → R_{μν}                               |
 | **Experiments**       | Philosophical                        | 5 tests (cryogenic, FCC, lambda_L, etc.)                |
 | **SM particles**      | No mechanism                         | Graph defects → quarks/leptons                          |
