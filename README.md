@@ -53,7 +53,7 @@ Explore the limits of standard QM.
 Identify a non-thermal error mechanism.
 
 
-🛠 Why It Hasn’t Been Done Yet
+❓ Why It Hasn’t Been Done Yet
 Sub-10 mK industrial cryostats became practical only recently.
 
 
@@ -61,6 +61,32 @@ Traditionally, lower temperature was expected to improve quantum computing perfo
 There was no theory of the discrete universe that allowed such a test.
 The predicted rise in errors contradicts standard quantum expectations.
 
+| Temperature (mK) | $P_{\text{error}}$ (Discrete Model) | Signal Strength |
+| ---------------- | ----------------------------------- | --------------- |
+| 50               | $B\cdot1^{3/2}=B$                   | Baseline        |
+| 30               | $B\cdot1.67^{3/2}\approx2.15B$      | +115% increase  |
+| 20               | $B\cdot2.5^{3/2}\approx3.95B$       | +295% increase  |
+| 10               | $B\cdot5^{3/2}\approx11.18B$        | +1018% increase |
+
+
+❄️ Mitigation of Technical Constraints
+
+| Original Requirement | Revised Solution         | Rationale                                        |
+| -------------------- | ------------------------ | ------------------------------------------------ |
+| Sub‑10 mK operation  | 10 mK endpoint           | Theory signal strong at $T/T_{\text{graph}}=0.2$ |
+| Coulomb thermometry  | Factory‑calibrated RuO₂  | ± 5 mK error tolerable for > 100% effect size    |
+| Magnetic shielding   | Standard cryoperm layers | Topological noise dominates at low T             |
+
+
+
+🛠 Hardware Requirements (Now Standard)
+
+| Component           | Specification                         | Availability              |
+|---------------------|---------------------------------------|---------------------------|
+| Quantum Processor   | Transmon qubits (IBM, Rigetti, etc.)  | Commercial/QPU clouds     |
+| Cryostat            | Dilution refrigerator (≤ 10 mK)       | Standard in quantum labs  |
+| Thermometry         | RuO₂ chip sensors (± 5 mK precision)  | Pre‑installed             |
+| Control Electronics | Room‑temperature waveform generators  | No special modifications  |
 
 
 🧪 The Critical Experiment
@@ -84,30 +110,32 @@ Run Shor’s algorithm 10^6 times for small numbers (N=15,21,35).
 
 Measure how error rates change as temperature drops.
 
-
-Expected result:
-Temperature
-Standard QM
-New Theory
-100 mK
-~10^-5
-~10^-5
-50 mK
-~10^-7
-~10^-5
-20 mK
-~10^-10
-~10^-4
-10 mK
-~10^-12
-~10^-3
-
 Key signature: when T<50 mK, errors rise by multiple orders instead of decreasing.
 Technical note for experimenters
 
 
 📊 Diagram (experiment flow):
-Entangled pair generator → quantum processor → cryostat → Shor’s algorithm → measure error rate → compare to theory.
+
+    A[Stabilize at 100 mK] --> B[Run Shor’s algorithm 10⁶ times]
+    
+    B --> C[Measure P_error]
+    
+    C --> D{Cool to next T}
+    
+    D -->|Down to 10 mK| B
+    
+    D -->|Complete| E[Compare P_error vs T]
+
+
+🧮 Data Analysis Simplified
+    
+    P50 = data[50]   # Error rate at 50 mK
+    
+    P10 = data[10]   # Error rate at 10 mK
+    
+    ratio = P10 / P50
+    
+    if ratio > 5     # Conservative threshold => The universe is discrete!
 
 
 
