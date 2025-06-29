@@ -43,7 +43,7 @@ Global layer: reversible gates (Fredkin/Toffoli).
 
 Concrete Form of Local Rule
 
-Specify the Boolean function f in:
+The Boolean function f:
 φ_v^(t+1) = R̂_local(φ_v, ⊕{u∈N(v)}φ_u, q{v,u}).
 
 How does f depend on topological charge q_e or gauge-like fields?
