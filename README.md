@@ -155,8 +155,6 @@ In brief:
 ✘ Does not disprove all of digital physics.
 
 
-Key formula:  P_error(T) ≈ exp(–T / T_c) + B × (T_graph / T)^(3/2)
-
 ✅ Conclusion
 If this is confirmed, the discreteness of the universe will be fully and forever confirmed, the way to a new discrete mathematics will open; the old continuous models will become special cases.
 ```
