@@ -158,5 +158,16 @@ In brief:
 ✅ Conclusion
 If this is confirmed, the discreteness of the universe will be fully and forever confirmed, the way to a new discrete mathematics will open; the old continuous models will become special cases.
 ```
+
+📝 Appendix: Implementation Details
+Shor's Algorithm Parameters
+
+| Number | Logical Qubits | Circuit Depth | Expected Duration   |
+|:------:|:--------------:|:-------------:|:-------------------:|
+|   15   |       5        |   120 gates   |   8 μs per run      |
+|   21   |       6        |   160 gates   |   12 μs per run     |
+|   35   |       8        |   220 gates   |   18 μs per run     |
+
+
 ```
 ![CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)  
