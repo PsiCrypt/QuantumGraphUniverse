@@ -1,5 +1,5 @@
-# Quantum Graph Universe  
-**Falsifiable theory of discrete spacetime**  
+# Falsifiable theory of discrete Quantum Graph Universe  
+**T_c - given in dimensionless units (see theory)**  
 
 ![SimResult](Simulator/results_plot.png)
 
