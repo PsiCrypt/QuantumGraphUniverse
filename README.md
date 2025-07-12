@@ -1,12 +1,15 @@
 # Falsifiable theory of discrete Quantum Graph Universe  
-**T_c - given in dimensionless units (see theory)**  
+
+[Numerical Checks: RG flow, Regge action, Discrete EM action](Numerical_Checks/RG/)
+
+[Simulation Hamiltonian of different configurations for calculation Tc](Simulator/)
+
+**T_c - given in dimensionless units (see theory)** 
+
 
 ![SimResult](Simulator/results_plot.png)
 
 ---
-
- 
-[Simulation Hamiltonian of different configurations for calculation Tc](Simulator/)
 
 ## License
 [![License: CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
