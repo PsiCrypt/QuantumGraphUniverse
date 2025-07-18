@@ -4,7 +4,7 @@
 
 [Simulation Hamiltonian of different configurations for calculation Tc](Simulator/)
 
-[Microwave Absorption Signatures of Quantum Graph Dynamics](Numerical_Checks/Appendix E/)
+[Microwave Absorption Signatures of Quantum Graph Dynamics](Numerical_Checks/Appendix_E)
 
 
 
