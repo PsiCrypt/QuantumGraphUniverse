@@ -4,6 +4,10 @@
 
 [Simulation Hamiltonian of different configurations for calculation Tc](Simulator/)
 
+[Microwave Absorption Signatures of Quantum Graph Dynamics]( Numerical_Checks/Appendix E/)
+
+
+
 **T_c - given in dimensionless units (see theory)** 
 
 
